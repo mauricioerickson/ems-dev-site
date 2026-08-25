@@ -1,0 +1,4 @@
+<IfModule mod_headers.c>
+    Header unset Content-Security-Policy
+    Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; frame-src 'self' https:;"
+</IfModule>

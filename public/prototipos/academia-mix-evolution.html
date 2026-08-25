@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <script>
+        if (window.self === window.top) {
+            window.location.href = window.location.pathname.replace('.html', '');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; frame-src 'self' https:;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Mix Evolution | Transforme Seu Corpo e Sua Mente</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lime: '#CCFF00',
+                            limeHover: '#B3E600',
+                            orange: '#FF5722',
+                            dark: '#0A0D14',
+                            card: '#121824',
+                            border: '#1F293D',
+                            accent: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Teko"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-lime {
+            box-shadow: 0 0 25px rgba(204, 255, 0, 0.25);
+        }
+        .glow-lime-sm {
+            box-shadow: 0 0 12px rgba(204, 255, 0, 0.2);
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 30%, #CCFF00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-orange-text {
+            background: linear-gradient(135deg, #FF7A00 0%, #FF3D00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-lime selection:text-black overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border/60 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-lime flex items-center justify-center font-heading text-black text-2xl font-bold tracking-wider group-hover:scale-105 transition-transform shadow-lg shadow-brand-lime/20">
+                        ME
+                    </div>
+                    <div>
+                        <span class="font-heading text-2xl font-bold tracking-wider text-white block leading-none">MIX <span class="text-brand-lime">EVOLUTION</span></span>
+                        <span class="text-[10px] text-slate-400 tracking-widest uppercase font-semibold block">Academia & Estúdio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#modalidades" class="hover:text-brand-lime transition-colors">Modalidades</a>
+                    <a href="#calculadora" class="hover:text-brand-lime transition-colors">Calculadora IMC</a>
+                    <a href="#diferenciais" class="hover:text-brand-lime transition-colors">Por Que Nós?</a>
+                    <a href="#planos" class="hover:text-brand-lime transition-colors">Planos</a>
+                    <a href="#localizacao" class="hover:text-brand-lime transition-colors">Localização</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://wa.me/5518996776514?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20minha%20AULA%20EXPERIMENTAL%20GRÁTIS!" 
+                       target="_blank" 
+                       class="bg-brand-lime hover:bg-brand-limeHover text-black font-bold px-5 py-2.5 rounded-xl text-sm transition-all shadow-md hover:shadow-brand-lime/30 flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Aula Grátis</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 focus:outline-none" aria-label="Abrir Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#modalidades" class="block py-2 text-slate-200 hover:text-brand-lime font-medium border-b border-brand-border/40">Modalidades</a>
+            <a href="#calculadora" class="block py-2 text-slate-200 hover:text-brand-lime font-medium border-b border-brand-border/40">Calculadora IMC</a>
+            <a href="#diferenciais" class="block py-2 text-slate-200 hover:text-brand-lime font-medium border-b border-brand-border/40">Por Que Nós?</a>
+            <a href="#planos" class="block py-2 text-slate-200 hover:text-brand-lime font-medium border-b border-brand-border/40">Planos</a>
+            <a href="#localizacao" class="block py-2 text-slate-200 hover:text-brand-lime font-medium">Localização</a>
+            <a href="https://wa.me/5518996776514?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20minha%20AULA%20EXPERIMENTAL%20GRÁTIS!" 
+               target="_blank" 
+               class="w-full mt-4 bg-brand-lime text-black text-center font-bold py-3 rounded-xl flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Agendar Experiência Grátis</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-grid-pattern">
+        <!-- Background Radial Gradient Spotlights -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-lime/10 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-0 w-[400px] h-[400px] bg-brand-orange/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <!-- Top Pill -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-lime/10 border border-brand-lime/30 text-brand-lime text-xs sm:text-sm font-semibold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-brand-lime animate-ping"></span>
+                        <span>Sua Evolução Começa Aqui • Araçatuba - SP</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        O corpo atinge o que a <span class="gradient-text uppercase font-heading text-5xl sm:text-6xl lg:text-7xl">Mente Acredita!</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Combine <strong class="text-white font-semibold">Musculação</strong>, <strong class="text-white font-semibold">Treinamento Funcional</strong> e <strong class="text-white font-semibold">Fit Dance</strong> em uma estrutura moderna feita para acelerar seus resultados com acompanhamento real.
+                    </p>
+
+                    <!-- Trust Badges & Highlights -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-xs sm:text-sm font-medium text-slate-300 pt-2">
+                        <div class="flex items-center gap-2 bg-brand-card/80 border border-brand-border px-3.5 py-2 rounded-lg">
+                            <i class="fa-solid fa-check text-brand-lime"></i>
+                            <span>Aceitamos <strong>Wellhub / Gympass</strong></span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-brand-card/80 border border-brand-border px-3.5 py-2 rounded-lg">
+                            <i class="fa-solid fa-check text-brand-lime"></i>
+                            <span>Instrutores Atenciosos</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-brand-card/80 border border-brand-border px-3.5 py-2 rounded-lg">
+                            <i class="fa-solid fa-check text-brand-lime"></i>
+                            <span>3 Dias de Teste Sem Custo</span>
+                        </div>
+                    </div>
+
+                    <!-- CTAs Container -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/5518996776514?text=Ol%C3%A1!%20Quero%20resgatar%20meu%20PASSE%20LIVRE%20de%20teste%20na%20Academia%20Mix%20Evolution!" 
+                           target="_blank" 
+                           class="w-full sm:w-auto bg-brand-lime hover:bg-brand-limeHover text-black font-extrabold text-base sm:text-lg px-8 py-4 rounded-xl shadow-xl shadow-brand-lime/20 hover:shadow-brand-lime/40 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 group">
+                            <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
+                            <span>QUERO MEU PASSE GRÁTIS</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+
+                        <button onclick="openLeadModal()" class="w-full sm:w-auto bg-brand-card hover:bg-brand-accent text-slate-200 border border-brand-border font-bold text-base px-6 py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calendar-check text-brand-lime"></i>
+                            <span>Agendar Visita Guiada</span>
+                        </button>
+                    </div>
+
+                    <!-- Counter Bar -->
+                    <div class="pt-6 border-t border-brand-border/60 grid grid-cols-3 gap-4 text-center lg:text-left max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="font-heading text-3xl sm:text-4xl font-bold text-brand-lime leading-none">+1.200</p>
+                            <p class="text-xs text-slate-400 mt-1">Alunos Transformados</p>
+                        </div>
+                        <div>
+                            <p class="font-heading text-3xl sm:text-4xl font-bold text-white leading-none">4.9 ★</p>
+                            <p class="text-xs text-slate-400 mt-1">Avaliação dos Alunos</p>
+                        </div>
+                        <div>
+                            <p class="font-heading text-3xl sm:text-4xl font-bold text-brand-lime leading-none">100%</p>
+                            <p class="text-xs text-slate-400 mt-1">Foco no Seu Resultado</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Media Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Frame Glow -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-lime to-brand-orange rounded-3xl blur-lg opacity-40 group-hover:opacity-100 transition duration-1000"></div>
+                        
+                        <div class="relative bg-brand-card border border-brand-border rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80" 
+                                 alt="Academia Mix Evolution Araçatuba" 
+                                 class="w-full h-[420px] object-cover hover:scale-105 transition-transform duration-700">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+
+                            <!-- Floating Badge Bottom -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-brand-dark/95 backdrop-blur-md p-4 rounded-2xl border border-brand-border flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-xl bg-brand-lime/20 border border-brand-lime flex items-center justify-center text-brand-lime text-xl">
+                                        <i class="fa-solid fa-fire-flame-curved"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-white">Treino de Alta Performance</p>
+                                        <p class="text-xs text-slate-400">Funcional • Musculação • FitDance</p>
+                                    </div>
+                                </div>
+                                <span class="bg-brand-lime text-black font-extrabold text-xs px-2.5 py-1 rounded-full uppercase">Ativo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Banner Bar -->
+    <div class="bg-gradient-to-r from-brand-lime/20 via-brand-lime/10 to-brand-orange/20 border-y border-brand-lime/30 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div class="flex items-center gap-3">
+                <span class="w-3 h-3 bg-brand-lime rounded-full animate-ping"></span>
+                <p class="text-sm sm:text-base font-bold text-white">
+                    🚨 OPORTUNIDADE: <span class="text-brand-lime">Matrícula Isenta</span> para novos alunos que agendarem esta semana!
+                </p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="text-xs font-semibold text-slate-300">
+                    Oferta encerra em: <span id="timer" class="font-mono text-brand-lime font-bold text-sm bg-black/50 px-2 py-1 rounded border border-brand-lime/30">23:59:45</span>
+                </div>
+                <a href="https://wa.me/5518996776514?text=Quero%20garantir%20minha%20MATR%C3%8DCULA%20ISENTA!" target="_blank" class="text-xs font-extrabold uppercase bg-brand-lime text-black px-4 py-2 rounded-lg hover:bg-white transition-colors">
+                    Garantir Agora
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modalities Grid -->
+    <section id="modalidades" class="py-20 relative bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs sm:text-sm font-extrabold text-brand-lime tracking-widest uppercase">Modalidades Completas</h2>
+                <p class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-2">
+                    Tudo o que você precisa em um só lugar
+                </p>
+                <p class="text-slate-400 mt-4 text-base">
+                    Seja qual for o seu objetivo — emagrecimento, ganho de massa muscular ou qualidade de vida — nós temos o treino ideal para o seu ritmo.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Musculação -->
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 hover:border-brand-lime/50 transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Musculação" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md text-brand-lime font-bold text-xs px-3 py-1 rounded-full border border-brand-lime/30">
+                                Hipertrofia & Força
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 flex items-center justify-between">
+                            Musculação
+                            <i class="fa-solid fa-dumbbell text-brand-lime group-hover:rotate-12 transition-transform"></i>
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Equipamentos selecionados para trabalhar cada grupo muscular com precisão, segurança e instrução constante da nossa equipe.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Treino individualizado conforme seu nível</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Correção contínua da execução</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Acompanhamento de evolução</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5518996776514?text=Tenho%20interesse%20na%20Muscula%C3%A7%C3%A3o!" target="_blank" class="w-full py-3 bg-brand-border hover:bg-brand-lime hover:text-black font-bold text-sm text-center rounded-xl transition-all">
+                        Saber Mais
+                    </a>
+                </div>
+
+                <!-- Card 2: Treinamento Funcional -->
+                <div class="bg-brand-card border border-brand-lime/40 rounded-2xl p-6 hover:border-brand-lime transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between relative shadow-lg shadow-brand-lime/5">
+                    <div class="absolute -top-3 right-6 bg-brand-lime text-black font-extrabold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                        Mais Procurado
+                    </div>
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Treinamento Funcional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md text-brand-lime font-bold text-xs px-3 py-1 rounded-full border border-brand-lime/30">
+                                Queima Calórica Acelerada
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 flex items-center justify-between">
+                            Treino Funcional
+                            <i class="fa-solid fa-bolt text-brand-lime group-hover:scale-125 transition-transform"></i>
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Circuitos dinâmicos que desenvolvem agilidade, força, resistência e queimam calorias em alto nível com muita energia em grupo.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Aulas dinâmicas e motivadoras</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Melhora do condicionamento físico</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Alto gasto calórico em 50min</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5518996776514?text=Quero%20testar%20o%20Treino%20Funcional!" target="_blank" class="w-full py-3 bg-brand-lime text-black font-extrabold text-sm text-center rounded-xl hover:bg-brand-limeHover transition-all shadow-md">
+                        Experimentar Grátis
+                    </a>
+                </div>
+
+                <!-- Card 3: Fit Dance -->
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 hover:border-brand-lime/50 transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=600&q=80" alt="Fit Dance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md text-brand-lime font-bold text-xs px-3 py-1 rounded-full border border-brand-lime/30">
+                                Diversão & Ritmo
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 flex items-center justify-between">
+                            Fit Dance
+                            <i class="fa-solid fa-music text-brand-lime group-hover:bounce transition-transform"></i>
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Aprenda as melhores coreografias, divirta-se, mande o estresse embora e perca calorias sem nem perceber que está treinando.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Coreografias atualizadas e fáceis</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Ambiente super acolhedor</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Tonificação muscular se divertindo</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5518996776514?text=Tenho%20interesse%20nas%20aulas%20de%20Fit%20Dance!" target="_blank" class="w-full py-3 bg-brand-border hover:bg-brand-lime hover:text-black font-bold text-sm text-center rounded-xl transition-all">
+                        Saber Mais
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive BMI & Goal Calculator -->
+    <section id="calculadora" class="py-20 bg-brand-card/50 border-y border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-lime/10 text-brand-lime text-xs font-bold uppercase tracking-wider">
+                        Ferramenta Gratuita
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                        Descubra a Modalidade Ideal para o Seu Objetivo
+                    </h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Calcule o seu IMC e veja qual combinação de treinos na <strong class="text-brand-lime">Mix Evolution</strong> vai gerar resultados mais rápidos para o seu perfil.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-lime/20 flex items-center justify-center text-brand-lime font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Preencha seus dados</h4>
+                                <p class="text-slate-400 text-xs">Insira peso, altura e seu objetivo principal.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-lime/20 flex items-center justify-center text-brand-lime font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Receba a recomendação instantânea</h4>
+                                <p class="text-slate-400 text-xs">O sistema calcula o treino sob medida.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-lime/20 flex items-center justify-center text-brand-lime font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Envie direto no WhatsApp</h4>
+                                <p class="text-slate-400 text-xs">Nossos professores já preparam seu plano no 1º dia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Calculator Card -->
+                <div class="lg:col-span-7 bg-brand-card border border-brand-border rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+                    <form id="bmiForm" onsubmit="calculateBMI(event)" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Seu Peso (kg)</label>
+                                <input type="number" id="weight" placeholder="Ex: 70" step="0.1" required class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-lime transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Sua Altura (cm)</label>
+                                <input type="number" id="height" placeholder="Ex: 175" required class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-lime transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Qual seu objetivo principal?</label>
+                            <select id="goal" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-lime transition-colors">
+                                <option value="perder_peso">Emagrecimento e Queima Calórica</option>
+                                <option value="ganhar_massa">Ganho de Massa Muscular (Hipertrofia)</option>
+                                <option value="condicionamento">Melhorar Condicionamento e Disposição</option>
+                                <option value="saude">Saúde, Postura e Qualidade de Vida</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-lime text-black font-extrabold py-4 rounded-xl hover:bg-brand-limeHover transition-all shadow-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>CALCULAR MEU PLANO RECOMENDADO</span>
+                        </button>
+                    </form>
+
+                    <!-- Result Container -->
+                    <div id="bmiResult" class="hidden mt-6 pt-6 border-t border-brand-border space-y-4">
+                        <div class="p-4 rounded-xl bg-brand-dark border border-brand-lime/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs text-slate-400 font-medium">Seu IMC Calculado:</span>
+                                <span id="bmiScore" class="text-2xl font-extrabold text-brand-lime">22.5</span>
+                            </div>
+                            <p id="bmiCategory" class="text-sm font-semibold text-white mb-2">Classificação: Peso Normal</p>
+                            <div class="p-3 bg-brand-card rounded-lg border border-brand-border text-xs text-slate-300">
+                                📌 <strong class="text-white">Recomendação Personalizada:</strong> <span id="bmiRecommendation">Foque em Musculação 3x por semana + Treino Funcional 2x por semana para ótimos resultados.</span>
+                            </div>
+                        </div>
+
+                        <a id="bmiWhatsappBtn" href="#" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 text-sm shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Enviar meu Diagnóstico no WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials & Wellhub Banner -->
+    <section id="diferenciais" class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Wellhub Special Highlight -->
+            <div class="bg-gradient-to-r from-slate-900 via-brand-card to-slate-900 border border-brand-border rounded-3xl p-8 sm:p-10 mb-20 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-brand-lime/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-bold uppercase">
+                            <i class="fa-solid fa-briefcase"></i> Benefício Corporativo
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                            Você tem Wellhub (antigo Gympass)?
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            A <strong class="text-white">Academia Mix Evolution</strong> é parceira oficial a partir do plano <strong class="text-brand-lime">Basic+</strong>. Treine com toda a nossa estrutura sem pagar taxa extra!
+                        </p>
+                    </div>
+                    <div class="md:col-span-4 flex flex-col sm:flex-row md:flex-col items-center justify-center gap-4">
+                        <a href="https://wa.me/5518996776514?text=Ol%C3%A1!%20Sou%20aluno%20Wellhub/Gympass%20e%20quero%20treinar%20na%20Mix%20Evolution!" target="_blank" class="w-full bg-brand-lime hover:bg-brand-limeHover text-black font-extrabold py-3.5 px-6 rounded-xl text-center text-sm transition-all shadow-md">
+                            Check-in com Wellhub
+                        </a>
+                        <span class="text-xs text-slate-400">Plano Basic+ • Araçatuba - SP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Differentials Cards -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs sm:text-sm font-extrabold text-brand-lime tracking-widest uppercase">Por que treinar aqui?</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+                    A estrutura que você precisa com a atenção que você merece
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-brand-card border border-brand-border p-6 rounded-2xl hover:border-brand-lime/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime text-xl mb-4">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Ambiente Acolhedor</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Aqui ninguém fica perdido. Nossa equipe orienta cada exercício com empatia e atenção contínua.
+                    </p>
+                </div>
+
+                <div class="bg-brand-card border border-brand-border p-6 rounded-2xl hover:border-brand-lime/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime text-xl mb-4">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Horários Flexíveis</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Aberto de manhã bem cedo (a partir das 05:30) até a noite (21:30) para caber na sua rotina corrida.
+                    </p>
+                </div>
+
+                <div class="bg-brand-card border border-brand-border p-6 rounded-2xl hover:border-brand-lime/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime text-xl mb-4">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Variedade de Aulas</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Combine força na musculação com gasto calórico no funcional e diversão no Fit Dance no mesmo local.
+                    </p>
+                </div>
+
+                <div class="bg-brand-card border border-brand-border p-6 rounded-2xl hover:border-brand-lime/40 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime text-xl mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Excelente Localização</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Fácil acesso no Bairro Planalto em Araçatuba com amplo espaço e estacionamento simplificado.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials / Social Proof -->
+    <section class="py-20 bg-brand-card/30 border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs sm:text-sm font-extrabold text-brand-lime tracking-widest uppercase">Histórias Reais</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+                    Quem treina na Mix Evolution aprova
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic mb-6">
+                            "A melhor escolha que fiz! Os professores realmente nos acompanham na musculação, não te deixam fazendo exercício errado. O clima da academia é super agradável!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-brand-border/60">
+                        <div class="w-10 h-10 rounded-full bg-brand-lime/20 flex items-center justify-center text-brand-lime font-bold text-sm">
+                            MN
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Mariana Nogueira</p>
+                            <p class="text-xs text-slate-400">Aluna há 8 meses • Araçatuba</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic mb-6">
+                            "As aulas de Treinamento Funcional me ajudaram a perder 11kg sem ficar naquela rotina chata de esteira. Energia sem igual dos instrutores!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-brand-border/60">
+                        <div class="w-10 h-10 rounded-full bg-brand-lime/20 flex items-center justify-center text-brand-lime font-bold text-sm">
+                            RC
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Rodrigo Carvalho</p>
+                            <p class="text-xs text-slate-400">Aluno de Funcional • Araçatuba</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic mb-6">
+                            "Uso pelo Wellhub e o atendimento é impecável. O Fit Dance de lá é sensacional, me divirto demais e saio renovada. Recomendando para todo mundo!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-brand-border/60">
+                        <div class="w-10 h-10 rounded-full bg-brand-lime/20 flex items-center justify-center text-brand-lime font-bold text-sm">
+                            CS
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Camila Santos</p>
+                            <p class="text-xs text-slate-400">Aluna Wellhub • Araçatuba</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="planos" class="py-20 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs sm:text-sm font-extrabold text-brand-lime tracking-widest uppercase">Planos Sem Pegadinhas</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+                    Invista na sua saúde pelo preço justo
+                </p>
+                <p class="text-slate-400 mt-4 text-sm">
+                    Escolha a modalidade de plano perfeita para você. Matrícula isenta na primeira semana!
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Plan 1: Mensal -->
+                <div class="bg-brand-card border border-brand-border rounded-3xl p-8 flex flex-col justify-between hover:border-brand-lime/40 transition-all">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Plano Mensal</h3>
+                        <p class="text-xs text-slate-400 mt-1">Flexibilidade total sem fidelidade</p>
+                        
+                        <div class="my-6">
+                            <span class="text-xs text-slate-400 uppercase font-semibold">A partir de</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-bold text-slate-300">R$</span>
+                                <span class="text-4xl font-extrabold text-white">119</span>
+                                <span class="text-xs text-slate-400">/mês</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-300 mb-8 border-t border-brand-border/60 pt-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Acesso ilimitado às modalidades</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Treinos orientados por professores</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Sem taxa de cancelamento</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/5518996776514?text=Quero%20saber%20mais%20sobre%20o%20PLANO%20MENSAL!" target="_blank" class="w-full bg-brand-border hover:bg-brand-lime hover:text-black font-bold py-3.5 rounded-xl text-center text-sm transition-all">
+                        Matricular no Mensal
+                    </a>
+                </div>
+
+                <!-- Plan 2: Trimestral / Popular -->
+                <div class="bg-brand-card border-2 border-brand-lime rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl shadow-brand-lime/10 scale-105 z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-lime text-black font-extrabold text-xs px-4 py-1 rounded-full uppercase tracking-wider">
+                        Mais Recomendado
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Plano Trimestral</h3>
+                        <p class="text-xs text-slate-300 mt-1">Garantia de foco e disciplina</p>
+                        
+                        <div class="my-6">
+                            <span class="text-xs text-slate-400 uppercase font-semibold">Apenas</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-bold text-slate-300">R$</span>
+                                <span class="text-5xl font-extrabold text-brand-lime">99</span>
+                                <span class="text-xs text-slate-400">,90/mês</span>
+                            </div>
+                            <span class="inline-block mt-2 text-[11px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded font-semibold">
+                                Economize 15% no valor total
+                            </span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-200 mb-8 border-t border-brand-border/60 pt-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Acesso total a Musculação & Funcional</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Avaliação Física Inicial Grátis</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Isenção da Taxa de Matrícula</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Acesso a Aulas Especiais de Fit Dance</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/5518996776514?text=Quero%20garantir%20o%20PLANO%20TRIMESTRAL%20com%20desconto!" target="_blank" class="w-full bg-brand-lime text-black hover:bg-brand-limeHover font-extrabold py-4 rounded-xl text-center text-sm transition-all shadow-lg shadow-brand-lime/20">
+                        GARANTIR PLANO POPULAR
+                    </a>
+                </div>
+
+                <!-- Plan 3: Wellhub Pass -->
+                <div class="bg-brand-card border border-brand-border rounded-3xl p-8 flex flex-col justify-between hover:border-brand-lime/40 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-white">Wellhub / Gympass</h3>
+                            <span class="bg-rose-500/20 text-rose-300 font-bold text-[10px] px-2.5 py-1 rounded-full uppercase">Parceiro</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">Para colaboradores cadastrados</p>
+                        
+                        <div class="my-6">
+                            <span class="text-xs text-slate-400 uppercase font-semibold">Plano Exigido</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-white">Basic+</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1">Com check-in diário liberado</p>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-300 mb-8 border-t border-brand-border/60 pt-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Check-in rápido pelo app</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Acesso a todas as modalidades</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> Suporte dos instrutores incluso</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/5518996776514?text=Tenho%20Wellhub/Gympass%20e%20quero%20iniciar!" target="_blank" class="w-full bg-brand-border hover:bg-brand-lime hover:text-black font-bold py-3.5 rounded-xl text-center text-sm transition-all">
+                        Fazer Check-in Inicial
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Operating Hours Section -->
+    <section id="localizacao" class="py-20 bg-brand-card/40 border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-lime/10 text-brand-lime text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-map-pin"></i> Nossa Unidade
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                        Venha nos conhecer em Araçatuba
+                    </h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Estamos localizados no coração do Bairro Planalto com fácil acesso, ambiente climatizado e estrutura preparada para te atender.
+                    </p>
+
+                    <!-- Info Cards -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card border border-brand-border">
+                            <div class="w-10 h-10 rounded-lg bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Endereço Completo</h4>
+                                <p class="text-slate-300 text-xs mt-1">Rua José Bezerra de Lima, 515 - Bairro Planalto, Araçatuba - SP, 16075-007</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card border border-brand-border">
+                            <div class="w-10 h-10 rounded-lg bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Horário de Funcionamento</h4>
+                                <div class="text-slate-300 text-xs mt-1 space-y-1">
+                                    <p>• <strong>Segunda a Sexta:</strong> 05:30 às 13:00 | 15:00 às 21:30</p>
+                                    <p>• <strong>Sábado:</strong> 10:00 às 12:00</p>
+                                    <p>• <strong>Domingo:</strong> Fechado</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card border border-brand-border">
+                            <div class="w-10 h-10 rounded-lg bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Atendimento via WhatsApp</h4>
+                                <p class="text-slate-300 text-xs mt-1">(18) 99677-6514 / (17) 99755-5180</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Map Preview Card -->
+                <div class="lg:col-span-6">
+                    <div class="bg-brand-card border border-brand-border rounded-3xl p-4 overflow-hidden shadow-2xl relative">
+                        <!-- Simulated Interactive Map Card -->
+                        <div class="relative h-[380px] rounded-2xl overflow-hidden bg-slate-800 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="Mapa Araçatuba" class="w-full h-full object-cover opacity-40">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent"></div>
+
+                            <!-- Map Overlay Badge -->
+                            <div class="absolute p-6 text-center max-w-sm bg-brand-dark/90 backdrop-blur-md rounded-2xl border border-brand-border shadow-2xl">
+                                <div class="w-12 h-12 rounded-full bg-brand-lime text-black flex items-center justify-center text-xl font-bold mx-auto mb-3 shadow-lg shadow-brand-lime/30">
+                                    <i class="fa-solid fa-dumbbell"></i>
+                                </div>
+                                <h4 class="font-extrabold text-white text-lg">Academia Mix Evolution</h4>
+                                <p class="text-slate-300 text-xs mt-1">Planaltos, Araçatuba - SP</p>
+                                <a href="https://maps.google.com/?q=Rua+José+Bezerra+de+Lima+515+Araçatuba" target="_blank" class="mt-4 inline-flex items-center justify-center gap-2 bg-brand-lime hover:bg-brand-limeHover text-black font-extrabold text-xs px-5 py-2.5 rounded-xl transition-all w-full">
+                                    <i class="fa-solid fa-route"></i> Abrir no Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs sm:text-sm font-extrabold text-brand-lime tracking-widest uppercase">Dúvidas Frequentes</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+                    Respostas para as principais perguntas
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full text-left p-5 text-white font-bold text-sm sm:text-base flex items-center justify-between hover:text-brand-lime transition-colors">
+                        <span>Nunca treinei em academia. Terei acompanhamento de instrução?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-brand-lime transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-brand-border/40 pt-4">
+                        Com certeza! Nossa equipe monta seu treino do zero e te acompanha na execução dos exercícios, garantindo segurança e evolução gradual no seu tempo.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full text-left p-5 text-white font-bold text-sm sm:text-base flex items-center justify-between hover:text-brand-lime transition-colors">
+                        <span>Como funciona a aula experimental de 3 dias grátis?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-brand-lime transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-brand-border/40 pt-4">
+                        É simples! Você chama a nossa equipe no WhatsApp, escolhe o dia da sua visita e vem experimentar o treino. Sem burocracia e sem compromisso de assinatura imediata.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full text-left p-5 text-white font-bold text-sm sm:text-base flex items-center justify-between hover:text-brand-lime transition-colors">
+                        <span>A academia aceita Wellhub (antigo Gympass)?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-brand-lime transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-brand-border/40 pt-4">
+                        Sim! Somos parceiros credenciados a partir do plano <strong>Basic+</strong>. Basta realizar o check-in pelo aplicativo antes da sua sessão de treino.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full text-left p-5 text-white font-bold text-sm sm:text-base flex items-center justify-between hover:text-brand-lime transition-colors">
+                        <span>Quais modalidades posso fazer na Mix Evolution?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-brand-lime transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-4" class="hidden px-5 pb-5 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-brand-border/40 pt-4">
+                        Oferecemos Musculação tradicional, Treinamento Funcional de alta intensidade e aulas de Fit Dance. Você pode mesclar as modalidades no seu plano de treino!
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Conversion Section -->
+    <section class="py-20 relative overflow-hidden bg-gradient-to-b from-brand-card to-brand-dark border-t border-brand-border">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-brand-lime/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+                Pronto para viver a sua melhor versão?
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+                Não deixe para amanhã a saúde e a energia que você pode conquistar hoje. Faça sua aula experimental gratuita agora mesmo na <strong class="text-brand-lime">Mix Evolution</strong>!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="https://wa.me/5518996776514?text=Quero%20agendar%20minha%20aula%20experimental%20agora!" 
+                   target="_blank" 
+                   class="w-full sm:w-auto bg-brand-lime hover:bg-brand-limeHover text-black font-extrabold text-lg px-9 py-4 rounded-xl shadow-xl shadow-brand-lime/20 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Falar no WhatsApp Agora</span>
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-400">
+                🔒 Seus dados estão seguros. Resposta em menos de 5 minutos em horário de funcionamento.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-brand-border py-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-lime text-black flex items-center justify-center font-heading text-xl font-bold">
+                        ME
+                    </div>
+                    <div>
+                        <span class="font-heading text-lg font-bold text-white block leading-none">ACADEMIA MIX EVOLUTION</span>
+                        <span class="text-[10px] text-slate-400 uppercase">Araçatuba - SP</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <a href="https://www.instagram.com/academiamixevolution" target="_blank" class="hover:text-brand-lime transition-colors flex items-center gap-2">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                        <span>@academiamixevolution</span>
+                    </a>
+                    <a href="https://wa.me/5518996776514" target="_blank" class="hover:text-brand-lime transition-colors flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>(18) 99677-6514</span>
+                    </a>
+                </div>
+
+                <p class="text-slate-400">
+                    © 2026 Academia Mix Evolution. Todos os direitos reservados.
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Sticky WhatsApp Button (Mobile & Desktop) -->
+    <a href="https://wa.me/5518996776514?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mix%20Evolution%20e%20quero%20informa%C3%A7%C3%B5es!" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border-2 border-white/20 glow-lime-sm" 
+       title="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Lead Capture Modal -->
+    <div id="leadModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-brand-card border border-brand-border rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl animate-fade-in">
+            <button onclick="closeLeadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-brand-lime/20 text-brand-lime rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white">Agende Seu Passe Livre</h3>
+                <p class="text-slate-300 text-xs mt-1">Preencha abaixo para receber no seu WhatsApp o voucher de 3 Dias Grátis.</p>
+            </div>
+
+            <form onsubmit="submitLeadModal(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Seu Nome</label>
+                    <input type="text" id="modalName" required placeholder="Digite seu nome" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-lime">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Seu WhatsApp</label>
+                    <input type="tel" id="modalPhone" required placeholder="(18) 99999-9999" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-lime">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Modalidade de Interesse</label>
+                    <select id="modalInterest" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-lime">
+                        <option>Musculação</option>
+                        <option>Treinamento Funcional</option>
+                        <option>Fit Dance</option>
+                        <option>Wellhub / Gympass</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-lime hover:bg-brand-limeHover text-black font-extrabold py-3.5 rounded-xl transition-all text-sm mt-2 shadow-lg">
+                    RECEBER VOUCHER NO WHATSAPP
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Interactive Logic Scripts -->
+    <script>
+        // Mobile Drawer Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle
+        function toggleFaq(index) {
+            const answer = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // BMI Calculator Engine
+        function calculateBMI(e) {
+            e.preventDefault();
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value) / 100;
+            const goal = document.getElementById('goal').value;
+
+            if (!weight || !height) return;
+
+            const bmi = (weight / (height * height)).toFixed(1);
+            let category = '';
+            let rec = '';
+
+            if (bmi < 18.5) {
+                category = 'Abaixo do peso ideal';
+                rec = 'Recomendamos iniciar com Musculação para hipertrofia e fortalecimento muscular, combinada com orientação nutricional.';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                category = 'Peso considerado saudável';
+                rec = 'Excelente! Você pode mesclar Musculação 3x/semana + Treinamento Funcional e Fit Dance para manter condicionamento e definição.';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                category = 'Sobrepeso moderado';
+                rec = 'Recomendamos foco em Treinamento Funcional para alto gasto calórico + Musculação para proteger articulações e acelerar o metabolismo.';
+            } else {
+                category = 'Obesidade leve/moderada';
+                rec = 'Recomendamos início adaptado com nosso time de professores: Treino Funcional adaptado + Musculação de fortalecimento com ritmo progressivo.';
+            }
+
+            document.getElementById('bmiScore').innerText = bmi;
+            document.getElementById('bmiCategory').innerText = `Classificação: ${category}`;
+            document.getElementById('bmiRecommendation').innerText = rec;
+
+            // Pre-fill WhatsApp URL
+            const textMsg = `Ol%C3%A1!%20Fiz%20o%20teste%20de%20IMC%20no%20site%20da%20Mix%20Evolution.%20Meu%20IMC%20foi%20${bmi}%20(${encodeURIComponent(category)}).%20Quero%20agendar%20minha%20aula!`;
+            document.getElementById('bmiWhatsappBtn').href = `https://wa.me/5518996776514?text=${textMsg}`;
+
+            document.getElementById('bmiResult').classList.remove('hidden');
+        }
+
+        // Timer Countdown Simulation
+        function startTimer() {
+            let duration = 23 * 3600 + 59 * 60 + 45;
+            const timerDisplay = document.getElementById('timer');
+            
+            setInterval(() => {
+                let hours = Math.floor(duration / 3600);
+                let minutes = Math.floor((duration % 3600) / 60);
+                let seconds = duration % 60;
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                if (timerDisplay) {
+                    timerDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+                }
+
+                if (--duration < 0) {
+                    duration = 24 * 3600;
+                }
+            }, 1000);
+        }
+        startTimer();
+
+        // Lead Modal Functions
+        function openLeadModal() {
+            document.getElementById('leadModal').classList.remove('hidden');
+        }
+
+        function closeLeadModal() {
+            document.getElementById('leadModal').classList.add('hidden');
+        }
+
+        function submitLeadModal(e) {
+            e.preventDefault();
+            const name = document.getElementById('modalName').value;
+            const phone = document.getElementById('modalPhone').value;
+            const interest = document.getElementById('modalInterest').value;
+
+            const msg = `Ol%C3%A1!%20Meu%20nome%20%C3%A9%20${encodeURIComponent(name)}%20(${encodeURIComponent(phone)}).%20Gostaria%20de%20garantir%20meu%20Voucher%20de%203%20Dias%20Gr%C3%A1tis%20para%20${encodeURIComponent(interest)}!`;
+            window.open(`https://wa.me/5518996776514?text=${msg}`, '_blank');
+            closeLeadModal();
+        }
+    </script>
+</body>
+</html>

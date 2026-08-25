@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <script>
+        if (window.self === window.top) {
+            window.location.href = window.location.pathname.replace('.html', '');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breno Cardoso | Fotografia & Audiovisual Editorial</title>
+    <meta name="description" content="Portfólio oficial de Breno Cardoso Fotografia (@brenocardosofotos). Especialista em casamentos, ensaios femininos, eventos sociais e produções visuais de alto impacto.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#f3d078',
+                            500: '#e2b15a',
+                            600: '#c7923e',
+                            700: '#a3722a',
+                        },
+                        dark: {
+                            900: '#090a0f',
+                            800: '#12151e',
+                            700: '#1c202d',
+                            600: '#2a2f42'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Glassmorphic elements */
+        .glass-panel {
+            background: rgba(18, 21, 30, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090a0f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2f42;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e2b15a;
+        }
+        /* Gold gradient text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f3d078 0%, #e2b15a 50%, #c7923e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Image zoom hover effect */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img {
+            transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 dark:bg-dark-900 dark:text-gray-100 selection:bg-gold-500 selection:text-black">
+
+    <div id="top-bar" class="bg-gradient-to-r from-gold-700 via-gold-500 to-gold-600 text-dark-900 font-semibold text-xs py-2 px-4 text-center tracking-wider uppercase flex items-center justify-center gap-2">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Agenda 2026/2027 Aberta • Datas limitadas para Casamentos e Ensaios Especiais</span>
+        <button onclick="document.getElementById('top-bar').style.display='none'" class="ml-4 hover:opacity-75 focus:outline-none" aria-label="Fechar aviso">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <nav class="sticky top-0 z-40 w-full glass-panel transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-dark-900 font-bold font-serif text-xl shadow-lg group-hover:scale-105 transition-transform">
+                        BC
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-lg tracking-widest uppercase font-bold text-white dark:text-white">Breno Cardoso</span>
+                        <span class="text-[10px] tracking-[0.25em] text-gold-500 uppercase font-medium">Fotografia & Cinema</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#sobre" class="hover:text-gold-500 transition-colors">Sobre Breno</a>
+                    <a href="#portfolio" class="hover:text-gold-500 transition-colors">Portfólio</a>
+                    <a href="#simulador" class="hover:text-gold-500 transition-colors flex items-center gap-1">
+                        Simulador <span class="bg-gold-500/20 text-gold-400 text-[10px] px-2 py-0.5 rounded-full font-bold">NOVO</span>
+                    </a>
+                    <a href="#depoimentos" class="hover:text-gold-500 transition-colors">Depoimentos</a>
+                    <a href="#faq" class="hover:text-gold-500 transition-colors">Dúvidas</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="hidden md:flex items-center gap-4">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="w-10 h-10 rounded-full bg-dark-700/60 hover:bg-dark-600 flex items-center justify-center text-gold-400 transition-colors" title="Alternar Tema">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+
+                    <!-- Primary WhatsApp CTA Button -->
+                    <a href="#contato" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-dark-900 font-bold px-5 py-2.5 rounded-full text-sm transition-all shadow-md hover:shadow-gold-500/20 flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Orçamento Rápido</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-2">
+                    <button id="mobile-theme-toggle" class="p-2 text-gold-400">
+                        <i class="fa-solid fa-sun dark:block hidden"></i>
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-gray-300 hover:text-white text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-dark-800 px-4 pt-4 pb-6 space-y-3">
+            <a href="#sobre" class="mobile-link block text-base font-medium py-2 hover:text-gold-500">Sobre Breno</a>
+            <a href="#portfolio" class="mobile-link block text-base font-medium py-2 hover:text-gold-500">Portfólio</a>
+            <a href="#simulador" class="mobile-link block text-base font-medium py-2 hover:text-gold-500">Simular Orçamento</a>
+            <a href="#depoimentos" class="mobile-link block text-base font-medium py-2 hover:text-gold-500">Depoimentos</a>
+            <a href="#faq" class="mobile-link block text-base font-medium py-2 hover:text-gold-500">Perguntas Frequentes</a>
+            <a href="#contato" class="mobile-link block w-full text-center bg-gold-500 text-dark-900 font-bold py-3 rounded-xl mt-4">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Agendar pelo WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20">
+        <!-- Background Image Grid with Gradient Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2000" alt="Fotografia de casamento elegante Breno Cardoso" class="w-full h-full object-cover object-center opacity-30 filter contrast-125 dark:opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-900/90 via-transparent to-dark-900/90"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dark-800/80 border border-gold-500/30 text-gold-400 text-xs sm:text-sm font-medium mb-6 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span>Fotografia Social, Ensaios & Direção de Fotografia</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-tight text-white mb-6 leading-[1.15]">
+                Memórias Inesquecíveis <br>
+                <span class="gold-gradient-text italic font-normal">Transformadas em Arte Visual</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Captando a essência espontânea, o olhar sofisticado e a emoção real dos momentos mais importantes da sua vida.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="#simulador" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-dark-900 font-extrabold px-8 py-4 rounded-full text-base transition-all shadow-lg hover:shadow-gold-500/25 flex items-center justify-center gap-3 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Simular Orçamento Agora</span>
+                </a>
+                <a href="#portfolio" class="w-full sm:w-auto glass-panel hover:bg-dark-700 text-white font-semibold px-8 py-4 rounded-full text-base transition-all flex items-center justify-center gap-2 border border-gray-700">
+                    <i class="fa-regular fa-images text-gold-400"></i>
+                    <span>Ver Portfólio</span>
+                </a>
+            </div>
+
+            <!-- Quick Metrics / Social Proof Badges -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-16 pt-10 border-t border-gray-800/80">
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl sm:text-4xl font-bold font-serif text-gold-400">+500</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-400 mt-1">Histórias Contadas</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl sm:text-4xl font-bold font-serif text-gold-400">5.0 ★</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-400 mt-1">Avaliação dos Clientes</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl sm:text-4xl font-bold font-serif text-gold-400">100%</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-400 mt-1">Pontualidade & Qualidade</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl sm:text-4xl font-bold font-serif text-gold-400">Internacional</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-400 mt-1">Atendimento Global</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-dark-800/50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Photographer Photo / Visual Composition -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Frame -->
+                        <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-gold-600/30 via-transparent to-gold-400/20 blur-lg"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden border border-gray-700 shadow-2xl img-zoom-container bg-dark-700">
+                            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&q=80&w=800" alt="Breno Cardoso Fotógrafo" class="w-full h-[520px] object-cover">
+                            
+                            <!-- Overlaid Instagram Card -->
+                            <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-xl flex items-center justify-between border border-white/10">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px]">
+                                        <div class="w-full h-full bg-dark-900 rounded-full flex items-center justify-center">
+                                            <i class="fa-brands fa-instagram text-gold-400"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-white leading-tight">@brenocardosofotos</h4>
+                                        <p class="text-xs text-gray-400">Instagram Oficial</p>
+                                    </div>
+                                </div>
+                                <a href="https://www.instagram.com/brenocardosofotos" target="_blank" rel="noopener noreferrer" class="bg-gold-500/20 hover:bg-gold-500 hover:text-dark-900 text-gold-400 text-xs font-bold px-3 py-1.5 rounded-lg transition-colors">
+                                    Seguir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text & Value Proposition -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-gold-500 font-semibold text-xs tracking-widest uppercase">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <span>O Olhar Por Trás da Lente</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight">
+                        Prazer, sou <span class="gold-gradient-text">Breno Cardoso</span>.
+                    </h2>
+
+                    <p class="text-gray-300 text-lg leading-relaxed font-light">
+                        Com anos de experiência dedicados à arte da fotografia social, ensaios autorais e direção de fotografia audiovisual, meu objetivo vai além de simplesmente apertar um botão. Eu capto a essência do momento.
+                    </p>
+
+                    <p class="text-gray-400 leading-relaxed">
+                        Cada ensaio e evento é tratado como uma obra única. Trabalho com iluminação dramática e natural, direção leve e acolhedora para que você se sinta 100% confortável, resultando em imagens autênticas, atemporais e com padrão editorial de revista.
+                    </p>
+
+                    <!-- Key Pillars -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-dark-700/50 border border-gray-800">
+                            <i class="fa-solid fa-wand-magic-sparkles text-gold-400 text-xl mb-2 block"></i>
+                            <h3 class="font-bold text-white text-base">Direção Humanizada</h3>
+                            <p class="text-xs text-gray-400 mt-1">Sem poses forçadas. Eu guio você para gestos naturais e conexões verdadeiras.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-dark-700/50 border border-gray-800">
+                            <i class="fa-solid fa-sliders text-gold-400 text-xl mb-2 block"></i>
+                            <h3 class="font-bold text-white text-base">Tratamento de Elite</h3>
+                            <p class="text-xs text-gray-400 mt-1">Color grading exclusivo e tratamento de pele refinado preservando a naturalidade.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-dark-700/50 border border-gray-800">
+                            <i class="fa-solid fa-box-archive text-gold-400 text-xl mb-2 block"></i>
+                            <h3 class="font-bold text-white text-base">Galeria Online Privada</h3>
+                            <p class="text-xs text-gray-400 mt-1">Acesso em alta resolução para download e seleção dos seus favoritos de forma fácil.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-dark-700/50 border border-gray-800">
+                            <i class="fa-solid fa-gem text-gold-400 text-xl mb-2 block"></i>
+                            <h3 class="font-bold text-white text-base">Álbuns Fine Art</h3>
+                            <p class="text-xs text-gray-400 mt-1">Impressão fotográfica profissional com encadernação de luxo e durabilidade vitalícia.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">Trabalhos Selecionados</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2">Explore o Portfólio</h2>
+                <p class="text-gray-400 mt-4">Navegue pelas categorias e confira a qualidade visual e emoção capturada em cada registro.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 mb-12" id="portfolio-filters">
+                <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-gold-500 text-dark-900 shadow-lg">
+                    Todos os Trabalhos
+                </button>
+                <button data-filter="casamentos" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-dark-800 text-gray-300 hover:text-white hover:bg-dark-700 border border-gray-800">
+                    Casamentos & Pre-Wedding
+                </button>
+                <button data-filter="ensaios" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-dark-800 text-gray-300 hover:text-white hover:bg-dark-700 border border-gray-800">
+                    Ensaios Femininos & Portraits
+                </button>
+                <button data-filter="eventos" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-dark-800 text-gray-300 hover:text-white hover:bg-dark-700 border border-gray-800">
+                    Eventos & Corporativo
+                </button>
+                <button data-filter="editorial" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-dark-800 text-gray-300 hover:text-white hover:bg-dark-700 border border-gray-800">
+                    Editorial & Moda
+                </button>
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                
+                <!-- Item 1: Casamento -->
+                <div class="portfolio-item casamentos group relative rounded-2xl overflow-hidden bg-dark-800 border border-gray-800 cursor-pointer aspect-[3/4] img-zoom-container"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200', 'Casamento Mariana & Lucas', 'Cerimônia ao Pôr do Sol • Iluminação Editorial')">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800" alt="Casamento Mariana & Lucas" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold-400 text-xs uppercase font-bold tracking-wider">Casamento</span>
+                        <h3 class="text-xl font-serif font-bold text-white">Mariana & Lucas</h3>
+                        <p class="text-xs text-gray-300 mt-1">Cerimônia ao Pôr do Sol • Iluminação Editorial</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gold-400 font-semibold">
+                            <span>Expandir imagem</span> <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Ensaio Feminino -->
+                <div class="portfolio-item ensaios group relative rounded-2xl overflow-hidden bg-dark-800 border border-gray-800 cursor-pointer aspect-[3/4] img-zoom-container"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200', 'Portrait Autoral - Sofia', 'Ensaio Urban & Lifestyle em Estúdio')">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" alt="Ensaio Feminino Sofia" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold-400 text-xs uppercase font-bold tracking-wider">Ensaio Portrait</span>
+                        <h3 class="text-xl font-serif font-bold text-white">Sofia M.</h3>
+                        <p class="text-xs text-gray-300 mt-1">Ensaio Urban & Lifestyle em Estúdio</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gold-400 font-semibold">
+                            <span>Expandir imagem</span> <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Pre-wedding -->
+                <div class="portfolio-item casamentos group relative rounded-2xl overflow-hidden bg-dark-800 border border-gray-800 cursor-pointer aspect-[3/4] img-zoom-container"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1200', 'Pre-Wedding Camila & Gabriel', 'Ensaio Externo na Praia ao Amanhecer')">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800" alt="Pre-Wedding Camila e Gabriel" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold-400 text-xs uppercase font-bold tracking-wider">Pre-Wedding</span>
+                        <h3 class="text-xl font-serif font-bold text-white">Camila & Gabriel</h3>
+                        <p class="text-xs text-gray-300 mt-1">Ensaio Externo na Praia ao Amanhecer</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gold-400 font-semibold">
+                            <span>Expandir imagem</span> <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Eventos -->
+                <div class="portfolio-item eventos group relative rounded-2xl overflow-hidden bg-dark-800 border border-gray-800 cursor-pointer aspect-[3/4] img-zoom-container"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200', 'Gala & Evento Corporativo', 'Cobertura Fotográfica de Alto Padrão')">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800" alt="Evento Social Breno Cardoso" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold-400 text-xs uppercase font-bold tracking-wider">Eventos Social</span>
+                        <h3 class="text-xl font-serif font-bold text-white">Noite de Gala & Premiação</h3>
+                        <p class="text-xs text-gray-300 mt-1">Cobertura Fotográfica de Alto Padrão</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gold-400 font-semibold">
+                            <span>Expandir imagem</span> <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Editorial -->
+                <div class="portfolio-item editorial group relative rounded-2xl overflow-hidden bg-dark-800 border border-gray-800 cursor-pointer aspect-[3/4] img-zoom-container"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=1200', 'Editorial de Moda - Coleção Verão', 'Campanha Visual & Direção de Arte')">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=800" alt="Editorial de Moda" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold-400 text-xs uppercase font-bold tracking-wider">Editorial & Moda</span>
+                        <h3 class="text-xl font-serif font-bold text-white">Coleção Verão</h3>
+                        <p class="text-xs text-gray-300 mt-1">Campanha Visual & Direção de Arte</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gold-400 font-semibold">
+                            <span>Expandir imagem</span> <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Ensaio Gestante -->
+                <div class="portfolio-item ensaios group relative rounded-2xl overflow-hidden bg-dark-800 border border-gray-800 cursor-pointer aspect-[3/4] img-zoom-container"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1200', 'Ensaio Gestante Fine Art', 'Sensibilidade e Luz Natural')">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800" alt="Ensaio Gestante Breno Cardoso" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold-400 text-xs uppercase font-bold tracking-wider">Ensaio Maternidade</span>
+                        <h3 class="text-xl font-serif font-bold text-white">Gestante Fine Art</h3>
+                        <p class="text-xs text-gray-300 mt-1">Sensibilidade e Luz Natural</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gold-400 font-semibold">
+                            <span>Expandir imagem</span> <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl hidden flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-gold-400 transition-colors z-50 focus:outline-none" aria-label="Fechar galeria">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="max-w-5xl w-full flex flex-col items-center">
+            <div class="relative max-h-[80vh] overflow-hidden rounded-xl border border-gray-800 shadow-2xl">
+                <img id="lightbox-img" src="" alt="" class="max-h-[80vh] w-auto object-contain">
+            </div>
+            <div class="mt-4 text-center">
+                <h3 id="lightbox-title" class="text-xl font-serif font-bold text-white"></h3>
+                <p id="lightbox-desc" class="text-sm text-gray-400 mt-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <section id="simulador" class="py-24 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-calculator"></i> Ferramenta Interativa
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2">Simule Seu Orçamento</h2>
+                <p class="text-gray-400 mt-3">Monte o pacote ideal para o seu projeto e receba uma estimativa personalizada direto no WhatsApp do Breno.</p>
+            </div>
+
+            <!-- Estimator Card -->
+            <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-gold-500/20 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-60 h-60 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <form id="calculator-form" onsubmit="sendQuoteToWhatsApp(event)">
+                    <div class="space-y-8">
+                        
+                        <!-- Step 1: Service Type -->
+                        <div>
+                            <label class="block text-sm font-bold text-gold-400 uppercase tracking-wider mb-4">
+                                1. Qual o tipo do seu ensaio ou evento?
+                            </label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <label class="calc-option cursor-pointer p-4 rounded-xl bg-dark-700/80 border border-gray-700 hover:border-gold-500/50 flex flex-col items-center text-center transition-all">
+                                    <input type="radio" name="service_type" value="casamento" data-price="3500" class="sr-only" checked onchange="updateCalculator()">
+                                    <i class="fa-solid fa-rings-wedding text-2xl text-gold-400 mb-2"></i>
+                                    <span class="text-xs font-bold text-white">Casamento / Pre-Wedding</span>
+                                </label>
+                                <label class="calc-option cursor-pointer p-4 rounded-xl bg-dark-700/80 border border-gray-700 hover:border-gold-500/50 flex flex-col items-center text-center transition-all">
+                                    <input type="radio" name="service_type" value="ensaio_individual" data-price="850" class="sr-only" onchange="updateCalculator()">
+                                    <i class="fa-solid fa-user-astronaut text-2xl text-gold-400 mb-2"></i>
+                                    <span class="text-xs font-bold text-white">Ensaio Individual / Portrait</span>
+                                </label>
+                                <label class="calc-option cursor-pointer p-4 rounded-xl bg-dark-700/80 border border-gray-700 hover:border-gold-500/50 flex flex-col items-center text-center transition-all">
+                                    <input type="radio" name="service_type" value="evento" data-price="1800" class="sr-only" onchange="updateCalculator()">
+                                    <i class="fa-solid fa-champagne-glasses text-2xl text-gold-400 mb-2"></i>
+                                    <span class="text-xs font-bold text-white">Evento Social / Festa</span>
+                                </label>
+                                <label class="calc-option cursor-pointer p-4 rounded-xl bg-dark-700/80 border border-gray-700 hover:border-gold-500/50 flex flex-col items-center text-center transition-all">
+                                    <input type="radio" name="service_type" value="editorial" data-price="2200" class="sr-only" onchange="updateCalculator()">
+                                    <i class="fa-solid fa-shirt text-2xl text-gold-400 mb-2"></i>
+                                    <span class="text-xs font-bold text-white">Editorial & Moda</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Hours Slider -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-sm font-bold text-gold-400 uppercase tracking-wider">
+                                    2. Horas de Cobertura Dedicada
+                                </label>
+                                <span id="hours-display" class="text-base font-bold text-white bg-dark-700 px-3 py-1 rounded-lg border border-gray-700">2 Horas</span>
+                            </div>
+                            <input type="range" id="hours-range" min="1" max="10" value="2" step="1" class="w-full accent-gold-500 bg-dark-700 h-2 rounded-lg cursor-pointer" oninput="updateCalculator()">
+                            <div class="flex justify-between text-[11px] text-gray-500 mt-1">
+                                <span>1h (Ensaio Rápido)</span>
+                                <span>5h (Meio Período)</span>
+                                <span>10h (Dia Todo)</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Extras Checklist -->
+                        <div>
+                            <label class="block text-sm font-bold text-gold-400 uppercase tracking-wider mb-4">
+                                3. Deseja Adicionar Algum Extra Premium?
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center justify-between p-3.5 rounded-xl bg-dark-700/50 border border-gray-800 cursor-pointer hover:border-gray-700 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="extra-album" value="650" class="w-4 h-4 text-gold-500 accent-gold-500 rounded" onchange="updateCalculator()">
+                                        <span class="text-sm text-gray-200">Álbum Fine Art Impresso (20x30)</span>
+                                    </div>
+                                    <span class="text-xs font-semibold text-gold-400">+ R$ 650</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3.5 rounded-xl bg-dark-700/50 border border-gray-800 cursor-pointer hover:border-gray-700 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="extra-drone" value="450" class="w-4 h-4 text-gold-500 accent-gold-500 rounded" onchange="updateCalculator()">
+                                        <span class="text-sm text-gray-200">Take Aéreo com Drone HD</span>
+                                    </div>
+                                    <span class="text-xs font-semibold text-gold-400">+ R$ 450</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3.5 rounded-xl bg-dark-700/50 border border-gray-800 cursor-pointer hover:border-gray-700 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="extra-second" value="600" class="w-4 h-4 text-gold-500 accent-gold-500 rounded" onchange="updateCalculator()">
+                                        <span class="text-sm text-gray-200">Segundo Fotógrafo Auxiliar</span>
+                                    </div>
+                                    <span class="text-xs font-semibold text-gold-400">+ R$ 600</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3.5 rounded-xl bg-dark-700/50 border border-gray-800 cursor-pointer hover:border-gray-700 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="extra-fast" value="300" class="w-4 h-4 text-gold-500 accent-gold-500 rounded" onchange="updateCalculator()">
+                                        <span class="text-sm text-gray-200">Entrega Expressa (Até 48h)</span>
+                                    </div>
+                                    <span class="text-xs font-semibold text-gold-400">+ R$ 300</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Price Summary Box -->
+                        <div class="p-6 rounded-2xl bg-dark-800 border border-gold-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-gray-400 tracking-wider">Estimativa Total do Pacote</span>
+                                <div class="flex items-baseline gap-2 mt-1">
+                                    <span class="text-sm text-gold-400 font-bold">A partir de</span>
+                                    <span id="total-price" class="text-3xl sm:text-4xl font-serif font-extrabold text-white">R$ 850</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1">*Valores sujeitos à confirmação de data e localização.</p>
+                            </div>
+
+                            <button type="submit" class="w-full md:w-auto bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-extrabold px-8 py-4 rounded-xl text-sm transition-all shadow-lg hover:shadow-green-500/20 flex items-center justify-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Enviar Simulação no WhatsApp</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-dark-800/30 border-y border-gray-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">Experiência Sem Estresse</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2">Como Funciona o Atendimento</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="relative p-6 rounded-2xl bg-dark-800 border border-gray-800">
+                    <span class="text-4xl font-serif font-bold text-gold-500/30 absolute top-4 right-4">01</span>
+                    <i class="fa-solid fa-comments text-gold-400 text-2xl mb-4 block"></i>
+                    <h3 class="font-bold text-white text-lg mb-2">1. Primeiro Contato</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Conversamos pelo WhatsApp ou vídeo chamada para entender seus desejos, estilo e definir a melhor data.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative p-6 rounded-2xl bg-dark-800 border border-gray-800">
+                    <span class="text-4xl font-serif font-bold text-gold-500/30 absolute top-4 right-4">02</span>
+                    <i class="fa-solid fa-map-location-dot text-gold-400 text-2xl mb-4 block"></i>
+                    <h3 class="font-bold text-white text-lg mb-2">2. Planejamento</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Definimos locais, guia de looks, horários com a melhor luz natural e roteiro completo.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative p-6 rounded-2xl bg-dark-800 border border-gray-800">
+                    <span class="text-4xl font-serif font-bold text-gold-500/30 absolute top-4 right-4">03</span>
+                    <i class="fa-solid fa-camera text-gold-400 text-2xl mb-4 block"></i>
+                    <h3 class="font-bold text-white text-lg mb-2">3. O Grande Dia</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Direção leve, ambiente descontraído e foco total em captar momentos genuínos.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative p-6 rounded-2xl bg-dark-800 border border-gray-800">
+                    <span class="text-4xl font-serif font-bold text-gold-500/30 absolute top-4 right-4">04</span>
+                    <i class="fa-solid fa-cloud-arrow-down text-gold-400 text-2xl mb-4 block"></i>
+                    <h3 class="font-bold text-white text-lg mb-2">4. Entrega Galeria</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Acesso à sua galeria privada online com fotos tratadas em altíssima definição pronta para baixar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="py-24 bg-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">Depoimentos Reais</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2">O Que Dizem Nossos Clientes</h2>
+                <div class="flex items-center justify-center gap-1 text-gold-400 text-lg mt-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-sm font-bold text-white ml-2">5.0 de 5 no Google & Instagram</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-800 relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic text-sm leading-relaxed mb-6">
+                            "O Breno é um artista sem igual! Eu nunca tinha feito ensaio antes e estava super nervosa. Ele me deixou extremamente à vontade e o resultado do meu ensaio de aniversário pareceu capa de revista!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Cliente Vanessa S." class="w-12 h-12 rounded-full object-cover border border-gold-500/50">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Vanessa Siqueira</h4>
+                            <span class="text-xs text-gray-400">Ensaio Portrait Individual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-800 relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic text-sm leading-relaxed mb-6">
+                            "Contratamos o Breno para registrar nosso casamento e foi a melhor escolha que fizemos. Ele capturou a emoção exata dos nossos pais chorando na cerimônia. As fotos nos emocionam até hoje."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Cliente Rodrigo & Beatriz" class="w-12 h-12 rounded-full object-cover border border-gold-500/50">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Rodrigo & Beatriz</h4>
+                            <span class="text-xs text-gray-400">Casamento no Campo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-800 relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic text-sm leading-relaxed mb-6">
+                            "Excelente profissionalismo e entrega super rápida. A qualidade das fotos do nosso evento de marca superou todas as expectativas da diretoria. Já virou nosso fotógrafo oficial!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" alt="Cliente Carla M." class="w-12 h-12 rounded-full object-cover border border-gold-500/50">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Carla Mendez</h4>
+                            <span class="text-xs text-gray-400">Diretora de Marketing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-800 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+                <div>
+                    <span class="text-gold-500 text-xs font-bold uppercase tracking-widest">Siga no Instagram</span>
+                    <h3 class="text-2xl font-serif font-bold text-white">@brenocardosofotos</h3>
+                </div>
+                <a href="https://www.instagram.com/brenocardosofotos" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-600 via-pink-600 to-yellow-500 text-white font-bold px-6 py-3 rounded-full text-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                    <span>Ver Perfil Completo</span>
+                </a>
+            </div>
+
+            <!-- Instagram Grid Mockup -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+                <a href="https://www.instagram.com/brenocardosofotos" target="_blank" class="block aspect-square rounded-xl overflow-hidden img-zoom-container group relative">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=400" alt="Instagram Post 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/brenocardosofotos" target="_blank" class="block aspect-square rounded-xl overflow-hidden img-zoom-container group relative">
+                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=400" alt="Instagram Post 2" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/brenocardosofotos" target="_blank" class="block aspect-square rounded-xl overflow-hidden img-zoom-container group relative">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&q=80&w=400" alt="Instagram Post 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/brenocardosofotos" target="_blank" class="block aspect-square rounded-xl overflow-hidden img-zoom-container group relative">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&q=80&w=400" alt="Instagram Post 4" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/brenocardosofotos" target="_blank" class="block aspect-square rounded-xl overflow-hidden img-zoom-container group relative">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=400" alt="Instagram Post 5" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/brenocardosofotos" target="_blank" class="block aspect-square rounded-xl overflow-hidden img-zoom-container group relative">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=400" alt="Instagram Post 6" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">Tire Suas Dúvidas</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                
+                <!-- FAQ Item 1 -->
+                <div class="rounded-2xl bg-dark-800 border border-gray-800 overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold text-white hover:text-gold-400 transition-colors">
+                        <span>Com quanta antecedência devo agendar minha data?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        Para casamentos, recomendamos reserva com 6 a 12 meses de antecedência. Para ensaios individuais e eventos sociais menores, de 2 a 4 semanas de antecedência costuma ser suficiente, sujeito à disponibilidade na agenda.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="rounded-2xl bg-dark-800 border border-gray-800 overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold text-white hover:text-gold-400 transition-colors">
+                        <span>Qual é o prazo de entrega das fotos tratadas?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        Para ensaios, a galeria prévia com fotos tratadas é entregue em até 7 dias úteis. Para casamentos e eventos de grande porte, o prazo médio é de 20 a 30 dias úteis para a entrega completa tratada e diagramada.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="rounded-2xl bg-dark-800 border border-gray-800 overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold text-white hover:text-gold-400 transition-colors">
+                        <span>O Breno atende fora da cidade ou estado?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        Com certeza! Breno Cardoso realiza Destination Weddings e ensaios externos em todo o Brasil e no exterior. As taxas de deslocamento e hospedagem são calculadas de forma transparente no orçamento.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="rounded-2xl bg-dark-800 border border-gray-800 overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold text-white hover:text-gold-400 transition-colors">
+                        <span>Quais são as formas de pagamento aceitas?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        Oferecemos condições facilitadas via PIX com desconto, ou parcelamento em até 10x no cartão de crédito. Também é possível parcelar via boleto/transferência até a data do evento.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-gradient-to-t from-dark-900 via-dark-800 to-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">Contato Direto</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight">
+                        Vamos criar algo <span class="gold-gradient-text italic">extraordinário</span> juntos?
+                    </h2>
+                    <p class="text-gray-300 font-light">
+                        Preencha o formulário ou entre em contato diretamente pelo WhatsApp. Garantimos resposta rápida em menos de 2 horas.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-dark-800 border border-gray-800">
+                            <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400 uppercase font-semibold">WhatsApp Direto</span>
+                                <h4 class="text-white font-bold text-sm sm:text-base">(11) 99999-8888</h4>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-dark-800 border border-gray-800">
+                            <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400 uppercase font-semibold">Perfil Oficial</span>
+                                <h4 class="text-white font-bold text-sm sm:text-base">@brenocardosofotos</h4>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-dark-800 border border-gray-800">
+                            <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400 uppercase font-semibold">E-mail Comercial</span>
+                                <h4 class="text-white font-bold text-sm sm:text-base">contato@brenocardoso.com.br</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="lg:col-span-7 glass-panel p-8 sm:p-10 rounded-3xl border border-gray-800 shadow-2xl">
+                    <form id="contact-form" onsubmit="handleLeadSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Seu Nome *</label>
+                                <input type="text" required placeholder="Ex: Ana Silva" class="w-full bg-dark-700 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Seu WhatsApp *</label>
+                                <input type="tel" required placeholder="(11) 99999-9999" class="w-full bg-dark-700 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Tipo de Projeto</label>
+                                <select class="w-full bg-dark-700 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 focus:outline-none">
+                                    <option value="Casamento">Casamento / Pre-Wedding</option>
+                                    <option value="Ensaio Individual">Ensaio Individual / Portrait</option>
+                                    <option value="Evento Social">Evento Social / Festa</option>
+                                    <option value="Editorial Moda">Editorial / Campanha</option>
+                                    <option value="Outro">Outro Projeto</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Data Pretendida</label>
+                                <input type="date" class="w-full bg-dark-700 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Detalhes do Projeto ou Dúvidas</label>
+                            <textarea rows="4" placeholder="Conte mais sobre o local, estilo que procura ou detalhes especiais..." class="w-full bg-dark-700 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-dark-900 font-extrabold py-4 rounded-xl text-base transition-all shadow-lg hover:shadow-gold-500/25 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Solicitar Proposta Exclusiva</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-900 border-t border-gray-800/80 py-12 text-center sm:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="font-serif text-lg font-bold text-white tracking-widest uppercase">Breno Cardoso Fotografia</h3>
+                    <p class="text-xs text-gray-400 mt-1">@brenocardosofotos • Todos os direitos reservados © 2026</p>
+                </div>
+
+                <div class="flex items-center space-x-6 text-gray-400">
+                    <a href="https://www.instagram.com/brenocardosofotos" target="_blank" class="hover:text-gold-400 transition-colors text-xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#contato" class="hover:text-gold-400 transition-colors text-xl">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <!-- Floating WhatsApp Button with Online Badge -->
+        <a href="https://wa.me/5511999998888?text=Ol%C3%A1%20Breno!%20Vi%20seu%20site%20portf%C3%B3lio%20e%20gostaria%20de%20consultar%20uma%20data." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="relative group bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-110"
+           aria-label="Atendimento pelo WhatsApp">
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-dark-900 flex items-center justify-center text-[9px] font-bold">1</span>
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <!-- Hover Tooltip -->
+            <span class="absolute right-16 top-2 bg-dark-800 text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-gray-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+                Falar com Breno Cardoso
+            </span>
+        </a>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            document.documentElement.classList.toggle('light');
+        }
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-gold-500', 'text-dark-900', 'shadow-lg');
+                    b.classList.add('bg-dark-800', 'text-gray-300');
+                });
+
+                btn.classList.add('active', 'bg-gold-500', 'text-dark-900', 'shadow-lg');
+                btn.classList.remove('bg-dark-800', 'text-gray-300');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        function openLightbox(imgUrl, title, desc) {
+            document.getElementById('lightbox-img').src = imgUrl;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox-desc').innerText = desc;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateCalculator() {
+            const serviceRadios = document.getElementsByName('service_type');
+            let basePrice = 850;
+            let selectedServiceName = "Ensaio Individual";
+
+            for (const radio of serviceRadios) {
+                if (radio.checked) {
+                    basePrice = parseInt(radio.getAttribute('data-price'));
+                    selectedServiceName = radio.nextElementSibling.nextElementSibling.innerText;
+                }
+            }
+
+            const hours = parseInt(document.getElementById('hours-range').value);
+            document.getElementById('hours-display').innerText = `${hours} ${hours === 1 ? 'Hora' : 'Horas'}`;
+
+            // Multiplier for hours beyond 1st hour
+            const extraHourRate = 350;
+            let hoursTotal = (hours - 1) * extraHourRate;
+
+            let extrasTotal = 0;
+            if (document.getElementById('extra-album').checked) extrasTotal += parseInt(document.getElementById('extra-album').value);
+            if (document.getElementById('extra-drone').checked) extrasTotal += parseInt(document.getElementById('extra-drone').value);
+            if (document.getElementById('extra-second').checked) extrasTotal += parseInt(document.getElementById('extra-second').value);
+            if (document.getElementById('extra-fast').checked) extrasTotal += parseInt(document.getElementById('extra-fast').value);
+
+            const grandTotal = basePrice + hoursTotal + extrasTotal;
+
+            document.getElementById('total-price').innerText = `R$ ${grandTotal.toLocaleString('pt-BR')}`;
+        }
+
+        function sendQuoteToWhatsApp(e) {
+            e.preventDefault();
+            const hours = document.getElementById('hours-range').value;
+            const totalPrice = document.getElementById('total-price').innerText;
+
+            const serviceRadios = document.getElementsByName('service_type');
+            let selectedServiceName = "Ensaio Individual";
+            for (const radio of serviceRadios) {
+                if (radio.checked) {
+                    selectedServiceName = radio.nextElementSibling.nextElementSibling.innerText;
+                }
+            }
+
+            let extras = [];
+            if (document.getElementById('extra-album').checked) extras.push("Álbum Fine Art");
+            if (document.getElementById('extra-drone').checked) extras.push("Drone HD");
+            if (document.getElementById('extra-second').checked) extras.push("2º Fotógrafo");
+            if (document.getElementById('extra-fast').checked) extras.push("Entrega Expressa");
+
+            const extrasText = extras.length > 0 ? extras.join(", ") : "Nenhum extra";
+
+            const msg = `Olá Breno Cardoso! Simulei meu orçamento no seu site:\n\n` +
+                        `• *Serviço:* ${selectedServiceName}\n` +
+                        `• *Duração:* ${hours} Horas\n` +
+                        `• *Opcionais:* ${extrasText}\n` +
+                        `• *Estimativa:* ${totalPrice}\n\n` +
+                        `Gostaria de verificar disponibilidade na agenda!`;
+
+            const encodedMsg = encodeURIComponent(msg);
+            window.open(`https://wa.me/5511999998888?text=${encodedMsg}`, '_blank');
+        }
+
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+
+                const isHidden = content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        function handleLeadSubmit(e) {
+            e.preventDefault();
+            alert('Obrigado! A sua solicitação foi recebida com sucesso. Breno Cardoso entrará em contato em breve via WhatsApp.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

@@ -1,13 +1,14 @@
 // src/components/Navbar.tsx
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const NAV_ITEMS = [
-  { href: "#servicos", label: "Serviços" },
+  { href: "#", label: "Início" },
+  { href: "#solucoes", label: "Soluções" },
   { href: "#produtos", label: "Produtos" },
-  { href: "#portfolio", label: "Projetos" },
-  { href: "#diferenciais", label: "Diferenciais" },
+  { href: "#cases", label: "Cases" },
   { href: "#sobre", label: "Sobre" },
   { href: "#contato", label: "Contato" },
 ];
@@ -18,16 +19,20 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-800/70 bg-slate-950/80 backdrop-blur">
       <div className="container-default flex items-center justify-between py-3">
-        <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-sky-600/90 shadow-lg shadow-sky-500/40">
-            <span className="text-sm font-semibold tracking-tight">EMS</span>
-          </div>
+        <div className="flex items-center gap-3">
+          <Image 
+            src="/icon.png" 
+            alt="EMS Dev Logo" 
+            width={38}
+            height={38}
+            className="rounded-xl shadow-lg shadow-sky-500/30 bg-slate-900" 
+          />
           <div className="flex flex-col leading-tight">
             <span className="text-sm font-semibold tracking-wide">
               EMS Dev
             </span>
             <span className="text-[11px] text-slate-400">
-              Desenvolvimento • Apps • Consultoria
+              Parceiro Técnico & Consultoria
             </span>
           </div>
         </div>
@@ -43,7 +48,7 @@ export function Navbar() {
             </a>
           ))}
           <a href="#contato" className="btn-primary text-xs">
-            Falar sobre um projeto
+            Falar sobre um problema
           </a>
         </nav>
 
@@ -73,7 +78,7 @@ export function Navbar() {
               className="btn-primary text-xs mt-2 w-full text-center"
               onClick={() => setOpen(false)}
             >
-              Falar sobre um projeto
+              Falar sobre um problema
             </a>
           </nav>
         </div>

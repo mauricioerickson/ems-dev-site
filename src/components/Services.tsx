@@ -1,70 +1,77 @@
 // src/components/Services.tsx
-const SERVICES = [
+
+const SOLUTIONS = [
   {
-    title: "Desenvolvimento Web",
-    description:
-      "Sistemas sob medida, painéis administrativos, SaaS, integrações com APIs, processos críticos e alto volume de dados.",
-    tags: ["Laravel", "PHP", "Node", "Spring Boot", "Filament"],
+    title: "Sistemas e Produtos Digitais",
+    description: "Sistemas sob medida, corporativos, SaaS, portais, plataformas, MVPs e evolução de produtos existentes.",
+    items: ["Sistemas sob medida", "Sistemas corporativos", "SaaS", "Portais", "Plataformas", "MVPs", "Evolução"]
   },
   {
-    title: "Aplicativos Mobile",
-    description:
-      "Apps corporativos para operação em campo, com sincronização, offline-first e integração completa com seu backend.",
-    tags: ["Flutter", "APIs REST", "Autenticação", "Push"],
+    title: "Sistemas Problemáticos",
+    description: "Seu sistema já existe, mas não está funcionando como deveria? Diagnóstico e recuperação.",
+    items: ["Sistemas lentos", "Erros recorrentes", "Instabilidade", "Memory leaks", "Problemas de banco", "Integrações quebradas", "Código legado"]
   },
   {
-    title: "Automações & ETL",
-    description:
-      "Pipelines profissionais de dados, scraping de fontes públicas, integração com bancos e estrutura para BI.",
-    tags: ["Python", "ETL", "PostgreSQL", "Scraping"],
+    title: "Automação",
+    description: "Substituição de processos manuais repetitivos por fluxos automatizados e robôs.",
+    items: ["Processos manuais", "Robôs", "Integração de ferramentas", "Processamento automático", "Automação operacional", "Relatórios automáticos"]
   },
   {
-    title: "Consultoria Técnica",
-    description:
-      "Análise de arquitetura, correção de projetos travados, revisão de código, otimização de performance e escalabilidade.",
-    tags: ["Arquitetura", "Refactor", "Diagnóstico"],
+    title: "Integrações",
+    description: "Conexão entre diferentes sistemas para que a informação flua sem intervenção humana.",
+    items: ["ERP", "APIs", "Sistemas legados", "Aplicativos", "Bancos de dados", "Serviços externos", "WhatsApp"]
   },
   {
-    title: "Suporte & Manutenção",
-    description:
-      "Evolução de sistemas existentes, inclusão de novas features e suporte contínuo para sua operação.",
-    tags: ["Manutenção", "SLA", "Evolução"],
+    title: "Dados",
+    description: "Transformar dados espalhados em informações estruturadas e prontas para uso.",
+    items: ["ETL", "Consolidação de bases", "Tratamento de dados", "Scraping", "BI", "Relatórios", "Grandes volumes"]
   },
+  {
+    title: "Aplicativos",
+    description: "Soluções mobile pensadas para a operação real e conectadas ao seu negócio.",
+    items: ["Apps corporativos", "Equipes de campo", "Coleta de dados", "Offline-first", "Sincronização", "Integração"]
+  }
 ];
 
 export function Services() {
   return (
-    <section id="servicos" className="section-padding border-t border-slate-900">
+    <section id="solucoes" className="section-padding border-t border-slate-900 bg-slate-950/40">
       <div className="container-default">
         <div className="mb-10">
-          <h2 className="section-title">Serviços</h2>
+          <h2 className="section-title">O que podemos resolver</h2>
           <p className="section-subtitle">
-            Do zero a produção, da ideia ao sistema que roda todo dia. A EMS
-            Dev atua em toda a cadeia: concepção, desenvolvimento, dados e
-            suporte.
+            Áreas de atuação onde combinamos diagnóstico técnico e execução para destravar operações.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {SERVICES.map((service) => (
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {SOLUTIONS.map((solution) => (
             <div
-              key={service.title}
-              className="rounded-2xl border border-slate-800 bg-slate-950/50 p-5 hover:border-sky-600/70 transition-colors"
+              key={solution.title}
+              className={`rounded-2xl border ${
+                solution.title === "Sistemas Problemáticos" 
+                  ? "border-amber-800/50 bg-amber-950/10 hover:border-amber-600/70" 
+                  : "border-slate-800 bg-slate-950/80 hover:border-sky-600/70"
+              } p-6 transition-colors`}
             >
-              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-slate-300 mb-4">
-                {service.description}
+              <h3 className={`text-lg font-semibold mb-3 ${
+                solution.title === "Sistemas Problemáticos" ? "text-amber-400" : "text-slate-100"
+              }`}>
+                {solution.title}
+              </h3>
+              <p className="text-sm text-slate-300 mb-5">
+                {solution.description}
               </p>
-              <div className="flex flex-wrap gap-2 text-[11px] text-sky-200">
-                {service.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-sky-500/10 border border-sky-500/40 px-2 py-1"
-                  >
-                    {tag}
-                  </span>
+              <ul className="flex flex-col gap-1.5">
+                {solution.items.map((item) => (
+                  <li key={item} className="text-xs text-slate-400 flex items-center gap-2">
+                    <span className={`w-1 h-1 rounded-full ${
+                      solution.title === "Sistemas Problemáticos" ? "bg-amber-600/50" : "bg-sky-500/50"
+                    }`}></span>
+                    {item}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
